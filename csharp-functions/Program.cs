@@ -119,6 +119,35 @@ namespace csharp_functions
 
             Console.WriteLine("somma elementi dell'array: " + arraySum(userArray));
             Console.WriteLine("somma elementi elevati al quadrato dell'array: " + arraySum(SquareArray(userArray)));
+            Console.WriteLine();
+
+
+            // EXTRA
+            // 1) Una funzione che, dato un numero intero n > 0, ne calcoli il fattoriale            int fattoriale(int num)
+            {
+                if (num > 0)
+                {
+                    return num * fattoriale(num - 1);
+                } else
+                {
+                    return 1;
+                }
+            }            int testNumber = 8;            Console.WriteLine($"il fattoriale di {testNumber} è {fattoriale(testNumber)}");            Console.WriteLine();            // 2) Una funzione che, dato un numero intero n >= 0, restituisca l'n-esimo elemento della sequenza di Fibonacci.
+            int fibonacci(int num)
+            {
+                if(num <= 0)
+                {
+                    return 0;
+                } else if(num == 1 || num == 2)
+                {
+                    return 1;
+                } else
+                {
+                    return fibonacci(num - 1) + fibonacci(num - 2);
+                }
+            }
+
+            Console.WriteLine($"il numero {testNumber} della sequenza di fibonacci corrisponde a {fibonacci(testNumber)}");
 
 
 
